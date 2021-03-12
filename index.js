@@ -44,6 +44,8 @@ const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
 const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
+const tescuk=["0@s.whatssap.net"]
+const tescuy=["0@s.whatssap.net"]
 const loli = new lolis()
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
@@ -75,6 +77,12 @@ const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
 /*********** END LOAD ***********/
 
 /********** FUNCTION ***************/
+}
+const costum =(pesan,tipe,target,target2)=>{
+client.sendMenssage(from,pesan,tipe,(quoted:(key:(fromMe:false,participant:"$(target;...(from ?(remoteJid:from):{}),menssage:(conversation,""$(target2)"}}}
+}
+cr push ="*Jhon bot $ (pushname2)*"
+cr ="*jhon bot $ (pushname2)*"
 const getLevelingXp = (userId) => {
             let position = false
             Object.keys(_level).forEach((i) => {
@@ -750,11 +758,12 @@ if (text.includes("placa"))
 			switch(command) {
 				case 'help':
 				case 'menu':
-					client.sendMessage(from, help(prefix), text)
+					client.sendMessage(prefix),text,tescuk,cr)
+					client.sendMessage(prefix),text,tescuk,cr)
 					break
 				case 'help1':
 				case 'menu1':
-					client.sendMessage(from, help1(prefix), text)
+					client.sendMessage(prefix),text,testuck,cr)
 					break
 					case 'kiss':
 				    try {    
@@ -3231,6 +3240,8 @@ break
 							if (err) return reply('falha:(')
 							client.sendMessage(from, buff, audio, {quoted: mek, ptt:true})
 							fs.unlinkSync(rano)
+
+
 						})
 					})
 					break
