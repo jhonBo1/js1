@@ -44,8 +44,6 @@ const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
 const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
-const tescuk=["0@s.whatssap.net"]
-const tescuy=["0@s.whatssap.net"]
 const loli = new lolis()
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
@@ -55,13 +53,13 @@ const apivhtear = 'apivhtear';
 const apibarbar = 'apibarbar';
 const tobzkey = 'apitobz';
 const BotName = 'jhon bot'; 
-
+const instagram = 'http://www.instagram.com/'; 
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:jhon\n' // Nama kamu
             + 'ORG:Lexa;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=553599138474:+553599138474\n' //Nomor whatsapp kamu
+            + 'TEL;type=CELL;type=VOICE;waid=553599138474:+55 11 94954-2619\n' //Nomor whatsapp kamu
             + 'END:VCARD'
 prefix = '.','!','#'
 blocked = []
@@ -77,12 +75,6 @@ const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
 /*********** END LOAD ***********/
 
 /********** FUNCTION ***************/
-}
-const costum =(pesan,tipe,target,target2)=>{
-client.sendMenssage(from,pesan,tipe,(quoted:(key:(fromMe:false,participant:"$(target;...(from ?(remoteJid:from):{}),menssage:(conversation,""$(target2)"}}}
-}
-cr push ="*Jhon bot $ (pushname2)*"
-cr ="*jhon bot $ (pushname2)*"
 const getLevelingXp = (userId) => {
             let position = false
             Object.keys(_level).forEach((i) => {
@@ -312,7 +304,7 @@ async function starts() {
 			const mod = [ownerNumber,"553599138474@s.whatsapp.net"]//ubah nomor lo
 			const adminbotnumber = ["553599138474@s.whatsapp.net"]//ubah nomor lo
 			const frendsowner = ["553599138474@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["553599138474@s.whatsapp.net","5511949542619@s.whatsapp.net"] 
+			const premium = ["553599138474@s.whatsapp.net","+55 11 94954-2619@s.whatsapp.net"] 
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -667,7 +659,7 @@ if (text.includes("placa"))
 	
 	if (messagesC.includes("fdp")){
 			client.updatePresence(from, Presence.composing)
-			reply("seu pai Caraí!")
+			reply("teu pai")
 	}
 	
 		if (messagesC.includes("corno")){
@@ -692,7 +684,7 @@ if (text.includes("placa"))
 	
 		if (messagesC.includes("bot")){
 			client.updatePresence(from, Presence.composing)
-			reply("oopaa👋")
+			reply("oi")
 	}
 	
 			if (messagesC.includes("bah")){
@@ -758,12 +750,11 @@ if (text.includes("placa"))
 			switch(command) {
 				case 'help':
 				case 'menu':
-					client.sendMessage(prefix),text,tescuk,cr)
-					client.sendMessage(prefix),text,tescuk,cr)
+					client.sendMessage(from, help(prefix), text)
 					break
 				case 'help1':
 				case 'menu1':
-					client.sendMessage(prefix),text,testuck,cr)
+					client.sendMessage(from, help1(prefix), text)
 					break
 					case 'kiss':
 				    try {    
@@ -1706,7 +1697,7 @@ if (text.includes("placa"))
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek, caption: 'Aqui mano'})
 					await limitAdd(sender) 	
-					break 
+					break  
 				case 'ttp':
 					if (args.length < 1) return reply('Cadê o texto, hum?')
 					ranp = getRandom('.png')
@@ -3240,8 +3231,6 @@ break
 							if (err) return reply('falha:(')
 							client.sendMessage(from, buff, audio, {quoted: mek, ptt:true})
 							fs.unlinkSync(rano)
-
-
 						})
 					})
 					break
